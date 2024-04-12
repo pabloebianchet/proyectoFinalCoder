@@ -1,0 +1,25 @@
+.cart-widget {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  color: #000;
+}
+
+.cart-widget i {
+  color: #000;
+}
+
+.cart-count {
+  position: absolute;
+  top: -4px;
+
+  width: 24px;
+  height: 24px;
+  border-radius: 50%; /* Esto hace que el contador sea un círculo perfecto */
+  background-color: red;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
