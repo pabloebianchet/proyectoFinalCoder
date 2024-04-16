@@ -18,7 +18,7 @@ const logoStyle = {
   cursor: "pointer",
 };
 
-function AppBarCustom() {
+export default function AppBarCustom() {
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -130,6 +130,11 @@ function AppBarCustom() {
               <MenuItem
                 onClick={() => scrollToSection("faq")}
                 sx={{ py: "6px", px: "12px" }}
+              ></MenuItem>
+
+              <MenuItem
+                onClick={() => scrollToSection("faq")}
+                sx={{ py: "6px", px: "12px" }}
               >
                 <CartWidget />
               </MenuItem>
@@ -237,8 +242,6 @@ function AppBarCustom() {
 }
 
 AppBar.propTypes = {
-  mode: PropTypes.oneOf(["dark", "light"]).isRequired,
-  toggleColorMode: PropTypes.func.isRequired,
+  mode: PropTypes.oneOf(["dark", "light"]),
+  toggleColorMode: PropTypes.func,
 };
-
-export default AppBarCustom;

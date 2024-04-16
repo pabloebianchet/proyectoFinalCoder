@@ -1,11 +1,14 @@
+import { Box } from "@mui/material";
 import "./App.css";
-import AppBarCustom from "./components/AppBar";
+import AppBarCustom from "./components/AppBarCustom";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
   return (
-    <div className="App">
+    <Box className="App" sx={{ marginTop: 10 }}>
       <AppBarCustom />
-    </div>
+      <ItemListContainer mensaje="Este es un mensaje" />
+    </Box>
   );
 }
 

@@ -1,10 +1,11 @@
-// const CartWidget = () => {
-//   return (
-//     <div className="cart-widget">
-//       <i className="fas fa-shopping-cart"></i>
-//       <span className="cart-count">0</span>
-//     </div>
-//   );
-// };
+import PropTypes from "prop-types";
 
-// export default CartWidget;
+const ItemListContainer = ({ mensaje }) => {
+  return <div>{mensaje}</div>;
+};
+
+ItemListContainer.propTypes = {
+  mensaje: PropTypes.string.isRequired,
+};
+
+export default ItemListContainer;
