@@ -7,7 +7,7 @@ function App() {
   return (
     <Box className="App" sx={{ marginTop: 10 }}>
       <AppBarCustom />
-      <ItemListContainer mensaje="Este es un mensaje" />
+      <ItemListContainer mensaje="Este es un mensaje nuevo" />
     </Box>
   );
 }
