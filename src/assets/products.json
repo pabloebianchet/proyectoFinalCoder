@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "tradeMark": "https://i.pinimg.com/564x/e7/65/04/e7650458fe434cd647eafb289a569fe2.jpg",
+    "productName": "Zapatillas Nike Air Max",
+    "descript": "Zapatillas deportivas para correr con tecnología Air Max para una mayor amortiguación.",
+    "text": "Amortiguación Air Max: La tecnología de amortiguación Air Max en el, talón ofrece una sensación de ligereza y suavidad en cada paso",
+    "imageSrc": "https://i.pinimg.com/564x/6f/e3/95/6fe395fd2217261f413fe42bc8dab51b.jpg"
+  },
+  {
+    "id": 2,
+    "tradeMark": "https://i.pinimg.com/564x/c4/57/91/c457912ca5ec78b64beb6f276d39a899.jpg",
+    "productName": "Zapatillas Adidas Ultraboost",
+    "descript": "Zapatillas de running con tecnología Ultraboost para un retorno de energía óptimo.",
+    "text": "Amortiguación Air Max: La tecnología de amortiguación Air Max en el talón ofrece una sensación de ligereza y suavidad en cada paso.",
+    "imageSrc": "https://i.pinimg.com/564x/c8/33/29/c8332919c813b850727f61008fa4b36c.jpg"
+  },
+  {
+    "id": 3,
+    "tradeMark": "https://i.pinimg.com/564x/e5/c0/22/e5c0226566e11c5c596b27837b59c357.jpg",
+    "productName": "Zapatillas New Balance Fresh Foam",
+    "descript": "Zapatillas cómodas con tecnología Fresh Foam para una sensación suave y acolchada.",
+    "text": "Amortiguación Air Max: La tecnología de amortiguación Air Max en el talón ofrece una sensación de ligereza y suavidad en cada paso.",
+    "imageSrc": "https://i.pinimg.com/564x/45/2b/a9/452ba9ff91b9801e47a8a4f040cdb769.jpg"
+  },
+  {
+    "id": 4,
+    "tradeMark": "https://i.pinimg.com/564x/e7/65/04/e7650458fe434cd647eafb289a569fe2.jpg",
+    "productName": "Zapatillas Nike Air Jordan SB",
+    "descript": "Zapatillas de Basquet Urbanas. Capellada sintética.",
+    "text": "Producto importado. Las clásicas SB en diversos colores. Calidad y diseño.",
+    "imageSrc": "https://i.pinimg.com/564x/ab/a7/75/aba77522870973c769e9f62e18fa054f.jpg"
+  },
+  {
+    "id": 5,
+    "tradeMark": "https://i.pinimg.com/564x/e5/c0/22/e5c0226566e11c5c596b27837b59c357.jpg",
+    "productName": "Zapatillas New Balance Beyond GR / 34",
+    "descript": "Zapatillas de Basquet Urbanas. Capellada sintética.",
+    "text": "Producto importado. Las clásicas SB en diversos colores. Calidad y diseño.",
+    "imageSrc": "https://i.pinimg.com/564x/3a/12/78/3a12787fa83167c910c17f2f4e987c77.jpg"
+  },
+  {
+    "id": 6,
+    "tradeMark": "https://i.pinimg.com/564x/c4/57/91/c457912ca5ec78b64beb6f276d39a899.jpg",
+    "productName": "Zapatillas Adidas Filos 65 TY",
+    "descript": "Zapatillas de Basquet Urbanas. Capellada sintética.",
+    "text": "Producto importado. Las clásicas SB en diversos colores. Calidad y diseño.",
+    "imageSrc": "https://i.pinimg.com/736x/03/4b/04/034b04900e2939f6af0ad65cd5d1a6a1.jpg"
+  }
+]

@@ -1,11 +1,18 @@
-import PropTypes from "prop-types";
+import ItemList from "./ItemList";
 
-const ItemListContainer = ({ mensaje }) => {
-  return <div>{mensaje}</div>;
-};
-
-ItemListContainer.propTypes = {
-  mensaje: PropTypes.string.isRequired,
+const ItemListContainer = () => {
+  return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        margin: "0 auto",
+        maxWidth: 1200,
+      }}
+    >
+      <ItemList />
+    </div>
+  );
 };
 
 export default ItemListContainer;
