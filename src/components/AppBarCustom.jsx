@@ -11,6 +11,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Drawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const logoStyle = {
   width: "140px",
@@ -48,6 +49,7 @@ export default function AppBarCustom() {
           bgcolor: "transparent",
           backgroundImage: "none",
           mt: 2,
+          marginTop: 5,
         }}
       >
         <Container maxWidth="lg">
@@ -89,12 +91,13 @@ export default function AppBarCustom() {
               />
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 <MenuItem
-                  onClick={() => scrollToSection("features")}
+                  component={Link}
+                  to="/"
                   sx={{ py: "6px", px: "12px" }}
                 >
-                  <Typography color="text.primary">Nosotros</Typography>
+                  <Typography color="text.primary">Inicio</Typography>
                 </MenuItem>
-                <MenuItem
+                {/* <MenuItem
                   onClick={() => scrollToSection("testimonials")}
                   sx={{ py: "6px", px: "12px" }}
                 >
@@ -105,15 +108,16 @@ export default function AppBarCustom() {
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography color="text.primary">Ofertas</Typography>
-                </MenuItem>
-                <MenuItem
+                </MenuItem> */}
+                {/* <MenuItem
                   onClick={() => scrollToSection("pricing")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography color="text.primary">Catálogo</Typography>
-                </MenuItem>
+                </MenuItem> */}
                 <MenuItem
-                  onClick={() => scrollToSection("faq")}
+                  component={Link}
+                  to="/Contacto"
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography color="text.primary">Contacto</Typography>
@@ -190,11 +194,11 @@ export default function AppBarCustom() {
                   <MenuItem>
                     <CartWidget />
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("features")}>
-                    Nosotros
+                  <MenuItem component={Link} to="/">
+                    Inicio
                   </MenuItem>
 
-                  <MenuItem onClick={() => scrollToSection("testimonials")}>
+                  {/* <MenuItem onClick={() => scrollToSection("testimonials")}>
                     Testimonios
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection("highlights")}>
@@ -202,8 +206,8 @@ export default function AppBarCustom() {
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection("pricing")}>
                     Catálogo
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("faq")}>
+                  </MenuItem> */}
+                  <MenuItem component={Link} to="/Contacto">
                     Contacto
                   </MenuItem>
                   <Divider />

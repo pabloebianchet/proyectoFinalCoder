@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Grid } from "@mui/material";
-import ProductCard from "./ProductCard";
+import Item from "./Item";
 import productsData from "../assets/products.json";
 import GridSkeleton from "./GridSkeleton";
 
@@ -48,7 +48,7 @@ function ItemList() {
                 md={4}
                 sx={{ display: "flex", justifyContent: "center" }}
               >
-                <ProductCard product={product} initialCount={0} />
+                <Item product={product} initialCount={0} />
               </Grid>
             ))}
         </Grid>

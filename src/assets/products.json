@@ -3,48 +3,48 @@
     "id": 1,
     "tradeMark": "https://i.pinimg.com/564x/e7/65/04/e7650458fe434cd647eafb289a569fe2.jpg",
     "productName": "Zapatillas Nike Air Max",
-    "descript": "Zapatillas deportivas para correr con tecnología Air Max para una mayor amortiguación.",
+    "price": 290.789,
     "text": "Amortiguación Air Max: La tecnología de amortiguación Air Max en el, talón ofrece una sensación de ligereza y suavidad en cada paso",
-    "imageSrc": "https://i.pinimg.com/564x/6f/e3/95/6fe395fd2217261f413fe42bc8dab51b.jpg"
+    "imageSrc": "https://i.pinimg.com/564x/5e/a1/f0/5ea1f0d52736523fd43f90aedd15c260.jpg"
   },
   {
     "id": 2,
     "tradeMark": "https://i.pinimg.com/564x/c4/57/91/c457912ca5ec78b64beb6f276d39a899.jpg",
-    "productName": "Zapatillas Adidas Ultraboost",
-    "descript": "Zapatillas de running con tecnología Ultraboost para un retorno de energía óptimo.",
+    "productName": "Zapatillas Adidas Ultra",
+    "price": 99.789,
     "text": "Amortiguación Air Max: La tecnología de amortiguación Air Max en el talón ofrece una sensación de ligereza y suavidad en cada paso.",
-    "imageSrc": "https://i.pinimg.com/564x/c8/33/29/c8332919c813b850727f61008fa4b36c.jpg"
+    "imageSrc": "https://i.pinimg.com/564x/c5/ec/43/c5ec43e7a9233ead78b8c069a84323ee.jpg"
   },
   {
     "id": 3,
     "tradeMark": "https://i.pinimg.com/564x/e5/c0/22/e5c0226566e11c5c596b27837b59c357.jpg",
-    "productName": "Zapatillas New Balance Fresh Foam",
-    "descript": "Zapatillas cómodas con tecnología Fresh Foam para una sensación suave y acolchada.",
+    "productName": "Zapatillas New Balance",
+    "price": 170.256,
     "text": "Amortiguación Air Max: La tecnología de amortiguación Air Max en el talón ofrece una sensación de ligereza y suavidad en cada paso.",
-    "imageSrc": "https://i.pinimg.com/564x/45/2b/a9/452ba9ff91b9801e47a8a4f040cdb769.jpg"
+    "imageSrc": "https://i.pinimg.com/736x/24/76/d9/2476d92f18dfbf9db8b05fe7c032c2f0.jpg"
   },
   {
     "id": 4,
     "tradeMark": "https://i.pinimg.com/564x/e7/65/04/e7650458fe434cd647eafb289a569fe2.jpg",
-    "productName": "Zapatillas Nike Air Jordan SB",
-    "descript": "Zapatillas de Basquet Urbanas. Capellada sintética.",
+    "productName": "Zapatillas Nike Jordan 6",
+    "price": 320.789,
     "text": "Producto importado. Las clásicas SB en diversos colores. Calidad y diseño.",
-    "imageSrc": "https://i.pinimg.com/564x/ab/a7/75/aba77522870973c769e9f62e18fa054f.jpg"
+    "imageSrc": "https://i.pinimg.com/564x/7c/ab/20/7cab2013555054a34f8b3e644bbfa723.jpg"
   },
   {
     "id": 5,
     "tradeMark": "https://i.pinimg.com/564x/e5/c0/22/e5c0226566e11c5c596b27837b59c357.jpg",
-    "productName": "Zapatillas New Balance Beyond GR / 34",
-    "descript": "Zapatillas de Basquet Urbanas. Capellada sintética.",
+    "productName": "Zapatillas New Balance",
+    "price": 70.789,
     "text": "Producto importado. Las clásicas SB en diversos colores. Calidad y diseño.",
-    "imageSrc": "https://i.pinimg.com/564x/3a/12/78/3a12787fa83167c910c17f2f4e987c77.jpg"
+    "imageSrc": "https://i.pinimg.com/564x/fd/70/7a/fd707aeb2d5625aad53ea73e34a06112.jpg"
   },
   {
     "id": 6,
     "tradeMark": "https://i.pinimg.com/564x/c4/57/91/c457912ca5ec78b64beb6f276d39a899.jpg",
-    "productName": "Zapatillas Adidas Filos 65 TY",
-    "descript": "Zapatillas de Basquet Urbanas. Capellada sintética.",
+    "productName": "Zapatillas Adidas Filos",
+    "price": 87.759,
     "text": "Producto importado. Las clásicas SB en diversos colores. Calidad y diseño.",
-    "imageSrc": "https://i.pinimg.com/736x/03/4b/04/034b04900e2939f6af0ad65cd5d1a6a1.jpg"
+    "imageSrc": "https://i.pinimg.com/564x/d5/f8/96/d5f896f4ea62d615edafd46af17dcd41.jpg"
   }
 ]

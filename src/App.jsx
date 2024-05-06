@@ -1,16 +1,24 @@
-import { Box } from "@mui/material";
+import Home from "./components/Home";
+import ProductDetail from "./components/ProductDetail";
+import Contact from "./components/Contact";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import AppBarCustom from "./components/AppBarCustom";
-import ItemListContainer from "./components/ItemListContainer";
 import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 function App() {
   return (
-    <Box className="App" sx={{ marginTop: 10 }}>
+    <BrowserRouter>
       <AppBarCustom />
-      <ItemListContainer />
+      <WhatsAppButton phoneNumber="+541136420582" />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ProductDetail/:productId" element={<ProductDetail />} />
+        <Route path="/Contacto" element={<Contact />} />
+      </Routes>
       <Footer />
-    </Box>
+    </BrowserRouter>
   );
 }
 

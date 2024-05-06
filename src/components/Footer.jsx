@@ -35,14 +35,14 @@ const Footer = () => {
               Contacto
             </Typography>
             <Typography variant="body2" color="text.primary">
-              <Link href="mailto:info@example.com" color="text.primary">
-                info@example.com
+              <Link href="mailto:info@dream.com" color="text.primary">
+                info@dream.com
               </Link>
             </Typography>
             <Typography variant="body2" color="text.primary">
               Teléfono:{" "}
-              <Link href="tel:+123456789" color="text.primary">
-                +123456789
+              <Link href="tel:+541136420582" color="text.primary">
+                +541136420582
               </Link>
             </Typography>
           </Grid>
@@ -63,7 +63,11 @@ const Footer = () => {
               <img
                 src="../src/assets/img/logo.png"
                 alt=""
-                style={{ maxWidth: "100%", height: "auto", width: "100px" }}
+                style={{
+                  maxWidth: "100%",
+                  height: "auto",
+                  width: "100px",
+                }}
               />
             </Typography>
           </Grid>
@@ -105,6 +109,35 @@ const Footer = () => {
             </Grid>
           </Grid>
         </Grid>
+        <Typography
+          color="text.primary"
+          variant="body2"
+          style={{ opacity: 0.6, marginTop: 20 }}
+        >
+          LAS FOTOS SON A MODO ILUSTRATIVO. LA VENTA DE CUALQUIERA DE LOS
+          PRODUCTOS PUBLICADOS ESTÁ SUJETA A LA VERIFICACIÓN DE STOCK. LOS
+          PRECIOS ONLINE Y LOS PLANES DE FINANCIACIÓN PARA LOS PRODUCTOS
+          PRESENTADOS/PUBLICADOS EN ESTA WEB, SON VÁLIDOS EXCLUSIVAMENTE PARA LA
+          COMPRA VÍA INTERNET EN LAS PÁGINAS ANTES MENCIONADAS. LAS
+          ESPECIFICACIONES TÉCNICAS Y DESCRIPCIONES ESTÁN SUJETAS A CAMBIOS SIN
+          PREVIO AVISO.
+        </Typography>
+        <Typography
+          variant="body2"
+          align="center"
+          color="text.primary"
+          gutterBottom
+        >
+          <img
+            src="../src/assets/img/foot.png"
+            alt=""
+            style={{
+              maxWidth: "100%",
+              height: "auto",
+              width: "600px",
+            }}
+          />
+        </Typography>
       </FooterContent>
     </FooterRoot>
   );

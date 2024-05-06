@@ -1,4 +1,4 @@
-import "./CartWidget.css";
+import "../styles/cart.css";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 const CartWidget = () => {
