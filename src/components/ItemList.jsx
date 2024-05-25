@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Grid } from "@mui/material";
 import Item from "./Item";
-import productsData from "../assets/products.json";
 import GridSkeleton from "./GridSkeleton";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebaseConfig"; // Asegúrate de que esta ruta y nombre coincidan exactamente con el nombre del archivo
 
 function ItemList() {
   const [loading, setLoading] = useState(true);
@@ -10,11 +11,18 @@ function ItemList() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // Simula una operación asincrónica con un retraso de 2 segundos
-      setTimeout(() => {
+      try {
+        const querySnapshot = await getDocs(collection(db, "dataProduct")); // Nombre de la colección en Firestore
+        const productsData = [];
+        querySnapshot.forEach((doc) => {
+          productsData.push({ ...doc.data(), id: doc.id });
+        });
         setProducts(productsData);
+      } catch (error) {
+        console.error("Error al obtener los productos: ", error);
+      } finally {
         setLoading(false);
-      }, 2000);
+      }
     };
 
     fetchData();

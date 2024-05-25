@@ -21,9 +21,25 @@ const logoStyle = {
 
 export default function AppBarCustom() {
   const [open, setOpen] = useState(false);
+  const [isSignedIn, setIsSignedIn] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
+  };
+
+  const handleSignIn = () => {
+    const userName = window.prompt("Por favor, ingrese su nombre:");
+    if (userName === "Admin") {
+      setIsSignedIn(true);
+      alert("Inicio de sesión exitoso!");
+    } else {
+      alert("Nombre incorrecto. Intente nuevamente.");
+    }
+  };
+
+  const handleSignOut = () => {
+    setIsSignedIn(false);
+    alert("Cierre de sesión exitoso");
   };
 
   const scrollToSection = (sectionId) => {
@@ -97,24 +113,6 @@ export default function AppBarCustom() {
                 >
                   <Typography color="text.primary">Inicio</Typography>
                 </MenuItem>
-                {/* <MenuItem
-                  onClick={() => scrollToSection("testimonials")}
-                  sx={{ py: "6px", px: "12px" }}
-                >
-                  <Typography color="text.primary">Testimonios</Typography>
-                </MenuItem>
-                <MenuItem
-                  onClick={() => scrollToSection("highlights")}
-                  sx={{ py: "6px", px: "12px" }}
-                >
-                  <Typography color="text.primary">Ofertas</Typography>
-                </MenuItem> */}
-                {/* <MenuItem
-                  onClick={() => scrollToSection("pricing")}
-                  sx={{ py: "6px", px: "12px" }}
-                >
-                  <Typography color="text.primary">Catálogo</Typography>
-                </MenuItem> */}
                 <MenuItem
                   component={Link}
                   to="/Contacto"
@@ -122,6 +120,24 @@ export default function AppBarCustom() {
                 >
                   <Typography color="text.primary">Contacto</Typography>
                 </MenuItem>
+                {isSignedIn && (
+                  <MenuItem
+                    component={Link}
+                    to="/Ordenes"
+                    sx={{ py: "6px", px: "12px" }}
+                  >
+                    <Typography color="text.primary">Ordenes</Typography>
+                  </MenuItem>
+                )}
+                {isSignedIn && (
+                  <MenuItem
+                    sx={{ py: "6px", px: "12px", color: "black" }}
+                    component={Link}
+                    to="/Suscriptores"
+                  >
+                    Suscriptores
+                  </MenuItem>
+                )}
               </Box>
             </Box>
             <Box
@@ -135,34 +151,39 @@ export default function AppBarCustom() {
                 onClick={() => scrollToSection("faq")}
                 sx={{ py: "6px", px: "12px" }}
               ></MenuItem>
-
+              {isSignedIn && (
+                <Typography sx={{ py: "6px", px: "12px" }} color="text.primary">
+                  Hola, Administrador!
+                </Typography>
+              )}
+              {!isSignedIn ? (
+                <Button
+                  color="primary"
+                  variant="text"
+                  size="small"
+                  onClick={handleSignIn}
+                >
+                  Sign in
+                </Button>
+              ) : (
+                <Button
+                  component={Link}
+                  to="/"
+                  color="primary"
+                  variant="contained"
+                  size="small"
+                  onClick={handleSignOut}
+                >
+                  Sign out
+                </Button>
+              )}
               <MenuItem
-                onClick={() => scrollToSection("faq")}
+                component={Link}
+                to="/Carrito"
                 sx={{ py: "6px", px: "12px" }}
               >
                 <CartWidget />
               </MenuItem>
-
-              {/* <Button
-                color="primary"
-                variant="text"
-                size="small"
-                component="a"
-                href="/material-ui/getting-started/templates/sign-in/"
-                target="_blank"
-              >
-                Sign in
-              </Button> */}
-              {/* <Button
-                color="primary"
-                variant="contained"
-                size="small"
-                component="a"
-                href="/material-ui/getting-started/templates/sign-up/"
-                target="_blank"
-              >
-                Sign up
-              </Button> */}
             </Box>
             <Box sx={{ display: { sm: "", md: "none" } }}>
               <Button
@@ -191,53 +212,73 @@ export default function AppBarCustom() {
                       flexGrow: 1,
                     }}
                   ></Box>
-                  <MenuItem>
+                  <MenuItem component={Link} to="/Carrito">
                     <CartWidget />
                   </MenuItem>
                   <MenuItem component={Link} to="/">
                     Inicio
                   </MenuItem>
 
-                  {/* <MenuItem onClick={() => scrollToSection("testimonials")}>
-                    Testimonios
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("highlights")}>
-                    Ofertas
-                  </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("pricing")}>
-                    Catálogo
-                  </MenuItem> */}
                   <MenuItem component={Link} to="/Contacto">
                     Contacto
                   </MenuItem>
+
+                  {isSignedIn && (
+                    <MenuItem
+                      component={Link}
+                      to="/Ordenes"
+                      sx={{ py: "6px", px: "12px" }}
+                    >
+                      <Typography color="text.primary">Ordenes</Typography>
+                    </MenuItem>
+                  )}
+                  {isSignedIn && (
+                    <MenuItem
+                      sx={{ py: "6px", px: "12px", color: "black" }}
+                      component={Link}
+                      to="/Suscriptores"
+                    >
+                      Suscriptores
+                    </MenuItem>
+                  )}
+
                   <Divider />
-                  <MenuItem>
-                    {/* <Button
-                      color="primary"
-                      variant="contained"
-                      component="a"
-                      href="/material-ui/getting-started/templates/sign-up/"
-                      target="_blank"
-                      sx={{ width: "100%" }}
+                  {isSignedIn && (
+                    <Typography
+                      sx={{ py: "6px", px: "12px" }}
+                      color="text.primary"
                     >
-                      Sign up
-                    </Button> */}
-                  </MenuItem>
-                  <MenuItem>
-                    {/* <Button
-                      color="primary"
-                      variant="outlined"
-                      component="a"
-                      href="/material-ui/getting-started/templates/sign-in/"
-                      target="_blank"
-                      sx={{ width: "100%" }}
-                    >
-                      Sign in
-                    </Button> */}
-                  </MenuItem>
-                </Box>{" "}
-              </Drawer>{" "}
-            </Box>{" "}
+                      Hola, Pablo!
+                    </Typography>
+                  )}
+                  {!isSignedIn ? (
+                    <MenuItem>
+                      <Button
+                        color="primary"
+                        variant="outlined"
+                        onClick={handleSignIn}
+                        sx={{ width: "100%" }}
+                      >
+                        Sign in
+                      </Button>
+                    </MenuItem>
+                  ) : (
+                    <MenuItem>
+                      <Button
+                        component={Link}
+                        to="/"
+                        color="primary"
+                        variant="contained"
+                        onClick={handleSignOut}
+                        sx={{ width: "100%" }}
+                      >
+                        Sign out
+                      </Button>
+                    </MenuItem>
+                  )}
+                </Box>
+              </Drawer>
+            </Box>
           </Toolbar>
         </Container>
       </AppBar>
@@ -245,7 +286,7 @@ export default function AppBarCustom() {
   );
 }
 
-AppBar.propTypes = {
+AppBarCustom.propTypes = {
   mode: PropTypes.oneOf(["dark", "light"]),
   toggleColorMode: PropTypes.func,
 };

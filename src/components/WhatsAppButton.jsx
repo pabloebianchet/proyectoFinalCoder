@@ -17,7 +17,9 @@ const WhatsAppButton = ({ phoneNumber }) => {
   };
 
   return (
-    <div style={{ position: "fixed", bottom: "30px", right: "20px" }}>
+    <div
+      style={{ position: "fixed", bottom: "30px", right: "20px", zIndex: 9999 }}
+    >
       <Fab color="primary" aria-label="whatsapp" onClick={handleClick}>
         <WhatsAppIcon />
       </Fab>

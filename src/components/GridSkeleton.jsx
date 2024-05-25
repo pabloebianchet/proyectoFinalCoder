@@ -6,7 +6,7 @@ import Skeleton from "./skeleton";
 
 const Item = styled(Paper)(({ theme }) => ({
   boxShadow: "none", // Eliminar la sombra/borde
-  padding: theme.spacing({ xs: 3, sm: 3, md: 5 }), // Ajusta el padding según el tamaño del dispositivo
+  padding: theme.spacing(5), // Ajusta el padding según el tamaño del dispositivo
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));

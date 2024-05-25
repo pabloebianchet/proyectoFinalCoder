@@ -68,11 +68,12 @@ const Contact = () => {
                   <Button
                     type="submit"
                     style={{
-                      backgroundColor: "#6161614b",
+                      backgroundColor: "#ffffff49",
                       marginTop: 50,
                       marginBottom: 10,
+                      border: "solid",
                     }}
-                    sx={{ borderRadius: "20px" }}
+                    sx={{ width: "30%", borderRadius: 20, marginTop: 5 }}
                   >
                     <Typography
                       variant="body2"

@@ -142,7 +142,7 @@ function ResponsiveAppBar() {
                 onClick={handleOpenUserMenu}
                 sx={{ p: 0, "&:focus": { outline: "none" } }}
               >
-                <CartWidget />
+                <CartWidget component={Link} to="/Carrito" />
               </IconButton>
             </Tooltip>
             <Menu

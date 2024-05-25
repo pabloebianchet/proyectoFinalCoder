@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
   Box,
@@ -9,26 +9,29 @@ import {
   CardMedia,
   Button,
   useMediaQuery,
+  Snackbar,
 } from "@mui/material";
-
+import { Alert } from "@mui/material";
 import tarjetas from "../assets/img/tarjetas.png";
+import { useCart } from "../context/CartContext";
+import { collection, getDocs, doc, getDoc } from "firebase/firestore";
+import { db } from "../firebaseConfig"; // Asegúrate de que esta ruta y nombre coincidan exactamente con el nombre del archivo
 
 const ProductDetail = () => {
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const isMobile = useMediaQuery((theme) => theme.breakpoints.down("sm"));
+  const { addToCart } = useCart();
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await fetch("../src/assets/products.json");
-        if (!response.ok) {
-          throw new Error("Error al cargar los datos del producto");
-        }
-        const data = await response.json();
-        const foundProduct = data.find((p) => p.id === parseInt(productId));
-        if (foundProduct) {
-          setProduct(foundProduct);
+        const docRef = doc(db, "dataProduct", productId);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          setProduct({ id: docSnap.id, ...docSnap.data() });
         } else {
           console.error(`Producto con ID ${productId} no encontrado.`);
         }
@@ -39,6 +42,17 @@ const ProductDetail = () => {
 
     fetchProduct();
   }, [productId]);
+
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart(product);
+      setSnackbarOpen(true); // Abrir Snackbar al agregar el producto al carrito
+    }
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbarOpen(false);
+  };
 
   return (
     <Box sx={{ marginTop: 20 }}>
@@ -85,12 +99,14 @@ const ProductDetail = () => {
                   }}
                 >
                   <Button
+                    onClick={handleAddToCart} // Asigna handleAddToCart al evento onClick del botón
                     style={{
-                      backgroundColor: "#6161614b",
+                      backgroundColor: "#ffffff49",
                       marginTop: 50,
                       marginBottom: 10,
+                      border: "solid",
                     }}
-                    sx={{ borderRadius: "20px" }}
+                    sx={{ borderRadius: "50px" }}
                   >
                     <Typography
                       variant="body2"
@@ -113,6 +129,17 @@ const ProductDetail = () => {
           </Grid>
         </Grid>
       )}
+
+      {/* Snackbar */}
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+      >
+        <Alert onClose={handleCloseSnackbar} severity="success">
+          Producto Agregado al Carrito
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };

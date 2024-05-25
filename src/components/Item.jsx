@@ -153,12 +153,21 @@ const Item = ({ product }) => {
         </Typography>
 
         <Button
-          style={{ color: "#FFFFFF", backgroundColor: "#6161614b" }}
+          style={{
+            backgroundColor: "#ffffff49",
+            marginTop: 50,
+            marginBottom: 10,
+            border: "solid",
+          }}
           sx={{ width: "50%", borderRadius: 20, marginTop: 5 }}
           component={Link}
           to={`/ProductDetail/${id}`}
         >
-          <Typography variant="body2" color="text.primary">
+          <Typography
+            variant="body2"
+            color="text.primary"
+            style={{ padding: 6 }}
+          >
             Ver Producto
           </Typography>
         </Button>
